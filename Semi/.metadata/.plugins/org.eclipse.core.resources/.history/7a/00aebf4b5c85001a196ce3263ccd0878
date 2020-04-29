@@ -1,0 +1,29 @@
+package my.day01;
+
+public class HelloTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("안녕하세요? 자바를 처음 합니다.");
+		System.out.println("");
+		
+		for(int i=9; i>0; i--) {
+			for(int j=i; j>0; j--) {
+				System.out.print("*");
+			}
+			System.out.print(""+(10-i));
+			System.out.println("");
+		}
+		
+		for(int a=1; a<10; a++) {
+			for(int b=10; b>1; b--) {
+				System.out.print("*");
+			}
+			System.out.print(a);
+			System.out.println("");
+		}
+		
+	}
+
+}

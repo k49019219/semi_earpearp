@@ -1,0 +1,49 @@
+package my.day11.a.inheritance;
+
+public class Company extends Member {
+	// Company extends Member
+	// Company 클래스는 Member 클래스의 자식 클래스가 된다는 말이다.
+	// 즉, Company 클래스는 Member 클래스의 field 및 method를 상속받아 쓰겠다는 말이다. 
+
+	// **** company 클래스의 속성 정하기(추상화 작업) ***
+	// attribute, property, field, 속성
+	// 클래스를 재사용할때 가져올 코드가 담긴 클래스를 부모 클래스라고 함.
+	long   seedMoney; // 자본금
+	String jobType;   // 회사의 종류(예> 제조업, 서비스업, IT업..)
+	
+	public Company() {}
+	
+	public Company(String id, String passwd, String name, long seedMoney, String jobType) {
+	
+		this.id = id;
+		this.passwd = passwd;
+		this.name = name;
+		this.seedMoney = seedMoney;
+		this.jobType = jobType;
+	}
+	
+	Member mb = new Member();
+	
+	
+	// behavior, method, 기능, 행위(추상화 작업)
+	void showCompanyInfo() {
+		String result = "";
+		
+		// 부모클래스의 객체(지금은 Member 클래스의 객체)를 나타내어주는 대명사가  super이다, this.해도 상관은 없음.
+		result += "1. 아이디 : " + super.id + "\n" ;
+		result += "2. 암   호 : " + super.passwd + "\n" ;
+		result += "3. 성   명 : " + super.name+"\n";
+		result += "4. 자본금 : " + seedMoney+"\n";
+		result += "5. 업   종 : " + jobType + "\n";
+		
+		System.out.println(result);
+		
+	}//end of void showCompanyInfo()------------------------------------------------------------
+	
+
+	
+	
+	
+	
+	
+}

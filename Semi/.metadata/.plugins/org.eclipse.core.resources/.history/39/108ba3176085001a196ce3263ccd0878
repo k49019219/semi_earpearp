@@ -1,0 +1,51 @@
+package my.day01;
+
+public class HelloTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("안녕하세요? 자바를 처음 합니다.");
+		System.out.println("");
+		
+		for(int i=9; i>0; i--) {
+			for(int j=i; j>0; j--) {
+				System.out.print("*");
+			}
+			System.out.print(10-i);
+			System.out.println("");
+		}
+		
+		System.out.println("==factorial Test==");
+		
+		HelloTest ht = new HelloTest();
+		
+		System.out.println("factorial1 "+ht.factorial1(5));
+		System.out.println("factorial2 "+ht.factorial2(5));
+		 
+		
+	}
+	
+	public int factorial1(int n) {
+
+	    int result = 1;
+
+	    for(int i=n; i>0; i--) {
+	       result *= i;       
+	    }
+
+	    return result;	    
+	 }
+
+
+	public int factorial2(int n) {
+
+	    if(n==1)
+	       return 1;
+	    else 
+	       return n*factorial2(--n);
+    	    
+	}
+
+
+}
